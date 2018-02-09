@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+{% for object in object_list %}
+<div class="post-entry">
+  <h2><a href="">{{ object.name }}</a></h2>
+  <p>{{ object.subject }}<br>
+     {{ object.mark}}
+</p>
+</div>
+{% endfor %}
+{% endif %}
+  
+{% endblock content %}

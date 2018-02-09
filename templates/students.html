@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+{% for object in object_list %}
+<div class="post-entry">
+  <h2><a href="{% url 'student' object.pk%}">{{ object.name }}</a></h2>
+  <p>{{ object.roll }}</p>
+</div>
+{% endfor %}
+{% endif %}
+  
+{% endblock content %}
