@@ -18,3 +18,8 @@ class Marks(models.Model):
 
     def __str__(self):
         return self.subject
+    
+class Courses(models.Model):
+    courseId = models.CharField(max_length=20)
+    semester = models.CharField()
+    credits = models.IntegerField()
